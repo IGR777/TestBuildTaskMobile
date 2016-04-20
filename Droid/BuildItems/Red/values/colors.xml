@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<color name="targetColor">#f00</color>
+	<color name="textColor">#fff</color>
+	<color name="buttonColor">#f00</color>
+</resources>
+

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="ChangeColorsAndroidTask" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<UsingTask TaskName="ChangeColorsAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+	<UsingTask TaskName="ChangeLogoAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+	<UsingTask TaskName="ChangeAppIconAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+	<UsingTask TaskName="ChangeSplashScreenAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+	<UsingTask TaskName="ChangeStringsAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+	<UsingTask TaskName="ChangeLayoutAndroidTask" AssemblyFile="$(MSBuildThisFileDirectory)\BuildTasks.dll" />
+
+	<Target Name="ChangeColors" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeColorsAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+
+	<Target Name="ChangeLogo" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeLogoAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+
+	<Target Name="ChangeAppIcon" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeAppIconAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+
+	<Target Name="ChangeSplashScreen" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeSplashScreenAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+
+	<Target Name="ChangeStrings" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeStringsAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+
+	<Target Name="ChangeLayout" AfterTargets="_GenerateAndroidResourceDir">
+		<ChangeLayoutAndroidTask ProjectPath="$(MSBuildProjectFullPath)" Configuration="$(Configuration)" IntermediateOutputPath = "$(IntermediateOutputPath)" AssemblyName = "$(AssemblyName)"/>/>
+	</Target>
+</Project>

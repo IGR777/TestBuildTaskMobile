@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3C57DFCB-B385-4D45-8272-96C249AE097A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TestBuildTaskMobile.Droid</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>TestBuildTaskMobile.Droid</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Red|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Red</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Green|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Green</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Blue|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Blue</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Purple|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Purple</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestBuildTaskMobile\TestBuildTaskMobile.csproj">
+      <Project>{23EA40AF-A7CD-4009-8E77-25D278A18F4D}</Project>
+      <Name>TestBuildTaskMobile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="BuildItems\Red\values\colors.xml" />
+    <None Include="BuildItems\Red\drawable\image.png" />
+    <None Include="BuildItems\Green\values\colors.xml" />
+    <None Include="BuildItems\Green\drawable\image.png" />
+    <None Include="BuildItems\Blue\values\colors.xml" />
+    <None Include="BuildItems\Blue\drawable\image.png" />
+    <None Include="BuildItems\Blue\drawable\Icon.png" />
+    <None Include="BuildItems\Green\drawable\Icon.png" />
+    <None Include="BuildItems\Red\drawable\Icon.png" />
+    <None Include="BuildItems\Green\drawable\splash.png" />
+    <None Include="BuildItems\Red\drawable\splash.png" />
+    <None Include="BuildItems\Blue\drawable\splash.png" />
+    <None Include="BuildItems\Red\values\Strings.xml" />
+    <None Include="BuildItems\Green\values\Strings.xml" />
+    <None Include="BuildItems\Blue\values\Strings.xml" />
+    <None Include="BuildItems\Purple\values\colors.xml" />
+    <None Include="BuildItems\Purple\values\Strings.xml" />
+    <None Include="BuildItems\Purple\drawable\image.png" />
+    <None Include="BuildItems\Purple\layout\main.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable\image.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+  </ItemGroup>
+  <Import Project="..\Tasks\Build.tasks" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="BuildItems\" />
+    <Folder Include="BuildItems\Red\" />
+    <Folder Include="BuildItems\Red\values\" />
+    <Folder Include="BuildItems\Red\drawable\" />
+    <Folder Include="BuildItems\Green\" />
+    <Folder Include="BuildItems\Green\drawable\" />
+    <Folder Include="BuildItems\Green\values\" />
+    <Folder Include="BuildItems\Blue\" />
+    <Folder Include="BuildItems\Blue\drawable\" />
+    <Folder Include="BuildItems\Blue\values\" />
+    <Folder Include="BuildItems\Purple\" />
+    <Folder Include="BuildItems\Purple\layout\" />
+    <Folder Include="BuildItems\Purple\values\" />
+    <Folder Include="BuildItems\Purple\drawable\" />
+  </ItemGroup>
+</Project>
