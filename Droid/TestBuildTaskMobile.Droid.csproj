@@ -64,12 +64,6 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestBuildTaskMobile\TestBuildTaskMobile.csproj">
-      <Project>{23EA40AF-A7CD-4009-8E77-25D278A18F4D}</Project>
-      <Name>TestBuildTaskMobile</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
